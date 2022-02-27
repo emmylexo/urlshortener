@@ -12,8 +12,8 @@
   <a href="https://github.com/emmylexo/urlshortener/blob/master/LICENSE" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/github/license/emmylexo/urlshortener" />
   </a>
-  <a href="https://twitter.com/immanuelabeng" target="_blank">
-    <img alt="Twitter: immanuelabeng" src="https://img.shields.io/twitter/follow/immanuelabeng.svg?style=social" />
+  <a href="https://twitter.com/AbengImmanuel" target="_blank">
+    <img alt="Twitter: AbengImmanuel" src="https://img.shields.io/twitter/follow/AbengImmanuel.svg?style=social" />
   </a>
 </p>
 
