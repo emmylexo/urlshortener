@@ -43,7 +43,7 @@ npm run test
 
 👤 **Abeng Emmanuel**
 
-* Twitter: [@immanuelabeng](https://twitter.com/immanuelabeng)
+* Twitter: [@AbengImmanuel](https://twitter.com/AbengImmanuel)
 * Github: [@emmylexo](https://github.com/emmylexo)
 * LinkedIn: [@Abeng Emmanuel](https://linkedin.com/in/Abeng Emmanuel)
 
