@@ -1,0 +1,59 @@
+{
+  "name": "urlshortener",
+  "description": "Shorten URL",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "NODE_ENV=test env TS_NODE_PROJECT=\"tsconfig.testing.json\" mocha --require ts-node/register 'src/tests/**/*.ts' -r dotenv/config --timeout 100000",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"tsc -w\" \"nodemon -r dotenv/config dist/index.js\"",
+    "build": "tsc",
+    "start": "node -r dotenv/config dist/index.js",
+    "prod": "node -r dotenv/config dist/index.js",
+    "test:watch": "NODE_ENV=test env TS_NODE_PROJECT=\"tsconfig.testing.json\" mocha -r dotenv/config index.ts --watch 'tests/**/*.ts' -r dotenv/config --timeout 100000"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/__mocks__/"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmylexo/urlshortener.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emmylexo/urlshortener/issues"
+  },
+  "homepage": "https://github.com/emmylexo/urlshortener#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "iyasunday": "^1.1.4",
+    "joi": "^17.6.0",
+    "nodemon": "^2.0.15",
+    "redis": "^4.0.4",
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/joi": "^17.2.3",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^17.0.21",
+    "@types/redis": "^4.0.11",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "jest": "^27.5.1",
+    "mocha": "^9.2.1",
+    "ts-node": "^10.5.0"
+  }
+}
