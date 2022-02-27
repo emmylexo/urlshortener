@@ -4,6 +4,7 @@ export interface URLInterface {
     shortUrl: string;
     code: string;
     clickedCount: number;
+    createdAt: number;
 }
 
 interface defaultResponseInterface {
@@ -16,4 +17,8 @@ export type encodeAndDecodeURLFunction = (
     body: {
         url: string
     },
+) => Promise<defaultResponseInterface>;
+
+export type statisticFunction = (
+    path: string
 ) => Promise<defaultResponseInterface>;

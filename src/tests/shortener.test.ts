@@ -14,11 +14,6 @@ var agent = request.agent(app)
 let shortUrl;
 
 describe('URL shortener test', () => {
-    before(async () => {
-        await delRedis('teams');
-        // request.agent(app).close();
-    });
-
     it('Should create a new Short URL', async () => {
         const res = await agent.post(`/v1/encode`).send({ url: 'https://ourpass.co/' });
         expect(res).to.have.status(200);
@@ -30,7 +25,7 @@ describe('URL shortener test', () => {
     })
 
     it('Should decode a short URL', async () => {
-        const res = await agent.post(`/v1/decode`).send({ shortUrl });
+        const res = await agent.get(`/v1/decode?url=${shortUrl}`);
         expect(res).to.have.status(200);
         expect(res).to.be.a('object');
         expect(res.body.data).to.be.a('object');
