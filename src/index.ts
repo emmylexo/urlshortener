@@ -10,9 +10,11 @@ Routes(app);
 
 
 (async () => {
-    app.listen(process.env.PORT, () => {
-        console.log(`App connected on port ${process.env.PORT}`)
-    })
-})();
+    if (!module.children) {
+        app.listen(process.env.PORT, () => {
+            console.log(`App connected on port ${process.env.PORT}`)
+        })
+    }
 
+})();
 export default app;

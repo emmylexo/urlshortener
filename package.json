@@ -9,7 +9,7 @@
     "build": "tsc",
     "start": "node -r dotenv/config dist/index.js",
     "prod": "node -r dotenv/config dist/index.js",
-    "test:watch": "NODE_ENV=test env TS_NODE_PROJECT=\"tsconfig.testing.json\" mocha -r dotenv/config index.ts --watch 'tests/**/*.ts' -r dotenv/config --timeout 100000"
+    "test:watch": "NODE_ENV=test env TS_NODE_PROJECT=\"tsconfig.testing.json\" mocha --require ts-node/register 'src/tests/**/*.ts' -r dotenv/config --timeout 100000 --watch"
   },
   "jest": {
     "testEnvironment": "node",
