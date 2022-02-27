@@ -7,10 +7,10 @@
     "test": "NODE_ENV=test env TS_NODE_PROJECT=\"tsconfig.testing.json\" mocha --require ts-node/register 'src/tests/**/*.ts' -r dotenv/config --timeout 100000",
     "dev": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"tsc -w\" \"nodemon -r dotenv/config dist/index.js\"",
     "build": "tsc",
-    "watch": "mocha -r ts-node/register 'src/tests/*test.ts'  --watch --watch-files 'src/app/modules/shortner/*.ts'",
+    "watch": "mocha -r ts-node/register 'src/tests/*test.ts'  --watch --watch-files 'src/app/modules/shortner/*.ts' -r dotenv/config --timeout 100000",
     "start": "node -r dotenv/config dist/index.js",
     "prod": "node -r dotenv/config dist/index.js",
-    "test:watch": "NODE_ENV=test env TS_NODE_PROJECT=\"tsconfig.testing.json\" mocha --require ts-node/register --watch 'src/tests/**/*.ts' -r dotenv/config --timeout 100000"
+    "test:watch": "NODE_ENV=development env TS_NODE_PROJECT=\"tsconfig.testing.json\" mocha --require ts-node/register --watch 'src/tests/**/*.ts' -r dotenv/config --timeout 100000"
   },
   "jest": {
     "testEnvironment": "node",
@@ -39,6 +39,7 @@
     "helmet": "^5.0.2",
     "iyasunday": "^1.1.4",
     "joi": "^17.6.0",
+    "nanoid": "^3.3.1",
     "nodemon": "^2.0.15",
     "redis": "^4.0.4",
     "typescript": "^4.5.5"

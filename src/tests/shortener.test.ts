@@ -16,8 +16,7 @@ let shortUrl;
 describe('URL shortener test', () => {
     before(async () => {
         await delRedis('teams');
-
-        request.agent(app).close();
+        // request.agent(app).close();
     });
 
     it('Should create a new Short URL', async () => {

@@ -1,8 +1,8 @@
 import { createClient } from 'redis';
 
 const Redis = createClient({
-  url: 'redis://redis-14848.c281.us-east-1-2.ec2.cloud.redislabs.com:14848',
-  password: 't2FbrT2YHeXhiRIwaH1YtMyCDfSRvBGQ'
+  // url: 'redis://redis-14848.c281.us-east-1-2.ec2.cloud.redislabs.com:14848',
+  // password: 't2FbrT2YHeXhiRIwaH1YtMyCDfSRvBGQ'
 });
 
 (async () => {

@@ -1,9 +1,10 @@
 import { Application } from "express";
 import { errorMessage } from "iyasunday";
+import URLShortner from '../modules/shortner';
 
 export default (app: Application): void => {
     const apiVersion: string = '/v1';
-    // app.use(apiVersion, Auth);
+    app.use(apiVersion, URLShortner);
 
 
     app.use((err, req, res, next) => {

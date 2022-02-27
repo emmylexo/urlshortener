@@ -1,8 +1,9 @@
 
 export interface URLInterface {
-    status: string;
-    matchDate: string;
-    slug: string;
+    url: string;
+    shortUrl: string;
+    code: string;
+    clickedCount: number;
 }
 
 interface defaultResponseInterface {
